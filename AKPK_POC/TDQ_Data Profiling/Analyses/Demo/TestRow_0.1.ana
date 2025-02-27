@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_UHvbQOtBEe64va9FZ4ziGw" name="TestRow" creationDate="2024-03-26T18:20:25.064+1100" defaultContext="Default">
+    <clientDependency href="../../../metadata/connections/SnowflakeDB_0.1.item#_dIUD4OtBEe64va9FZ4ziGw"/>
+    <taggedValue xmi:id="_UHvbQetBEe64va9FZ4ziGw" tag="Status" value="development"/>
+    <taggedValue xmi:id="_UHvbQutBEe64va9FZ4ziGw" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+    <taggedValue xmi:id="_UHvbQ-tBEe64va9FZ4ziGw" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_UHvbROtBEe64va9FZ4ziGw" tag="Description" value=""/>
+    <taggedValue xmi:id="_UHvbRetBEe64va9FZ4ziGw" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_dIS1wetBEe64va9FZ4ziGw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_dIS1wutBEe64va9FZ4ziGw" tag="PREVIEW_ROW_NUMBER" value="999"/>
+    <taggedValue xmi:id="_dIS1w-tBEe64va9FZ4ziGw" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_dIUq8OtBEe64va9FZ4ziGw" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_UHvbRutBEe64va9FZ4ziGw">
+      <connection href="../../../metadata/connections/SnowflakeDB_0.1.item#_WTTGEIA7Ee2iSIuFypJhuw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbQOtBEe64va9FZ4ziGw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbROtBEe64va9FZ4ziGw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbSOtBEe64va9FZ4ziGw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbTOtBEe64va9FZ4ziGw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbUOtBEe64va9FZ4ziGw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbVOtBEe64va9FZ4ziGw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbWOtBEe64va9FZ4ziGw"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbXOtBEe64va9FZ4ziGw"/>
+    </context>
+    <results xmi:id="_UHvbR-tBEe64va9FZ4ziGw">
+      <resultMetadata xmi:id="_UHvbSOtBEe64va9FZ4ziGw" executionDate="2024-03-26T18:23:46.594+1100" executionDuration="31726" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LUOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LUetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbQOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gesetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5smYOtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f5smYetBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f5smYutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f5smY-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LUutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LU-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbQOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6geuOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_CARDNO&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5ubkOtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f5ubketBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f5ubkutBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f5ubk-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LVOtBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="5368002">
+        <parameters xmi:id="_fn_LVetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbQOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6geuetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_CARDNO&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5vpsOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f5vpsetBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f5vpsutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f5vps-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LVutBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="757387">
+        <parameters xmi:id="_fn_LV-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbQOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6geuutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_CARDNO&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_CARDNO&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5w30OtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f5w30etBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f5w30utBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f5w30-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f5w31OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f5w31etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f5w31utBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f5w31-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f5w32OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f5w32etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LWOtBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="4610615">
+        <parameters xmi:id="_fn_LWetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbQOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6geu-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_CARDNO&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_CARDNO&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5yF8OtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f5yF8etBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f5yF8utBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f5yF8-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f5yF9OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f5yF9etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f5yF9utBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f5yF9-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f5yF-OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f5yF-etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_fn_LWutBEe64va9FZ4ziGw" count="45856577" computed="true" blankCount="25">
+        <parameters xmi:id="_fn_LW-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbQOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gevOtBEe64va9FZ4ziGw" body="SELECT COUNT(&quot;NCSH_CARDNO&quot;) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE TRIM(&quot;NCSH_CARDNO&quot;) = '' " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5z7IOtBEe64va9FZ4ziGw" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_f5z7IetBEe64va9FZ4ziGw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_f5z7IutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_f5z7I-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f5z7JOtBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f5z7JetBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_f5z7JutBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f5z7J-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LXOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LXetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbROtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gesutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f51wUOtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f51wUetBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f51wUutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f51wU-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LXutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LX-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbROtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gevetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_MFGNO&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f52-cOtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f52-cetBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f52-cutBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f52-c-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LYOtBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="5368043">
+        <parameters xmi:id="_fn_LYetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbROtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gevutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_MFGNO&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f54zoOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f54zoetBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f54zoutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f54zo-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LYutBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="757416">
+        <parameters xmi:id="_fn_LY-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbROtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gev-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_MFGNO&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_MFGNO&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f56BwOtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f56BwetBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f56BwutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f56Bw-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f56BxOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f56BxetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f56BxutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f56Bx-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f56ByOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f56ByetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LZOtBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="4610627">
+        <parameters xmi:id="_fn_LZetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbROtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gewOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_MFGNO&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_MFGNO&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f57P4OtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f57P4etBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f57P4utBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f57P4-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f57P5OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f57P5etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f57P5utBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f57P5-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f57P6OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f57P6etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_fn_LZutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LZ-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbROtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gewetBEe64va9FZ4ziGw" body="SELECT COUNT(&quot;NCSH_MFGNO&quot;) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE TRIM(&quot;NCSH_MFGNO&quot;) = '' " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f58eAOtBEe64va9FZ4ziGw" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_f58eAetBEe64va9FZ4ziGw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_f58eAutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_f58eA-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f58eBOtBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f58eBetBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_f58eButBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f58eB-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LaOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LaetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbSOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gesOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f59FEOtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f59FEetBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f59FEutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f59FE-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LautBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_La-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbSOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gewutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_ENTRYDATETIME&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f59sIOtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f59sIetBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f59sIutBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f59sI-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LbOtBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="2409686">
+        <parameters xmi:id="_fn_LbetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbSOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gew-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_ENTRYDATETIME&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5-6QOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f5-6QetBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f5-6QutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f5-6Q-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LbutBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="68367">
+        <parameters xmi:id="_fn_Lb-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbSOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gexOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_ENTRYDATETIME&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_ENTRYDATETIME&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f5_hUOtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f5_hUetBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f5_hUutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f5_hU-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f5_hVOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f5_hVetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f5_hVutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f5_hV-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f5_hWOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f5_hWetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LcOtBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="2341319">
+        <parameters xmi:id="_fn_LcetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbSOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gexetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_ENTRYDATETIME&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_ENTRYDATETIME&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6AIYOtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f6AIYetBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f6AIYutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f6AIY-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6AIZOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6AIZetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6AIZutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6AIZ-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6AIaOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6AIaetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_fn_LcutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_Lc-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbSOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gexutBEe64va9FZ4ziGw" body="SELECT COUNT(&quot;NCSH_ENTRYDATETIME&quot;) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE TRIM(&quot;NCSH_ENTRYDATETIME&quot;) = '' " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6AvcOtBEe64va9FZ4ziGw" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_f6AvcetBEe64va9FZ4ziGw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_f6AvcutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_f6Avc-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6AvdOtBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6AvdetBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_f6AvdutBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6Avd-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LdOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LdetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbTOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6getutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6B9kOtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f6B9ketBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f6B9kutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f6B9k-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LdutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_Ld-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbTOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gex-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_EXITDATETIME&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6CkoOtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f6CkoetBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f6CkoutBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f6Cko-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LeOtBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="2399185">
+        <parameters xmi:id="_fn_LeetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbTOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6geyOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_EXITDATETIME&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6DLsOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f6DLsetBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f6DLsutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f6DLs-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LeutBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="56473">
+        <parameters xmi:id="_fn_Le-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbTOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6geyetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_EXITDATETIME&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_EXITDATETIME&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6EZ0OtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f6EZ0etBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f6EZ0utBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f6EZ0-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6EZ1OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6EZ1etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6EZ1utBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6EZ1-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6EZ2OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6EZ2etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LfOtBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="2342712">
+        <parameters xmi:id="_fn_LfetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbTOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6geyutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_EXITDATETIME&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_EXITDATETIME&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6FA4OtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f6FA4etBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f6FA4utBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f6FA4-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6FA5OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6FA5etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6FA5utBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6FA5-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6FA6OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6FA6etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_fn_LfutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_Lf-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbTOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gey-tBEe64va9FZ4ziGw" body="SELECT COUNT(&quot;NCSH_EXITDATETIME&quot;) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE TRIM(&quot;NCSH_EXITDATETIME&quot;) = '' " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6GPAOtBEe64va9FZ4ziGw" name="Blank Count" label="Blank Count">
+          <taggedValue xmi:id="_f6GPAetBEe64va9FZ4ziGw" tag="Description" value="counts the number of blank rows. A blank is a non null textual data that contains only white spaces (or nothing). Note that Oracle does not distinguish between the empty string and the null value"/>
+          <taggedValue xmi:id="_f6GPAutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of blank records"/>
+          <sqlGenericExpression xmi:id="_f6GPA-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6GPBOtBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE TRIM(&lt;%=__COLUMN_NAMES__%>) IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6GPBetBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="DB2"/>
+          <sqlGenericExpression xmi:id="_f6GPButBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%>  WHERE LTRIM(RTRIM(&lt;%=__COLUMN_NAMES__%>)) = '' &lt;%=__AND_WHERE_CLAUSE__%>" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6GPB-tBEe64va9FZ4ziGw" body="SELECT COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> WHERE (&lt;%=__COLUMN_NAMES__%> = '' or RTRIM(LTRIM(&lt;%=__COLUMN_NAMES__%>)) = '') &lt;%=__AND_WHERE_CLAUSE__%>" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LgOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LgetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbUOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6get-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6G2EOtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f6G2EetBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f6G2EutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f6G2E-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LgutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_Lg-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbUOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gezOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_ENTRYPLAZA&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6IEMOtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f6IEMetBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f6IEMutBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f6IEM-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LhOtBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="106">
+        <parameters xmi:id="_fn_LhetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbUOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gezetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_ENTRYPLAZA&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6IrQOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f6IrQetBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f6IrQutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f6IrQ-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LhutBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="10">
+        <parameters xmi:id="_fn_Lh-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbUOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gezutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_ENTRYPLAZA&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_ENTRYPLAZA&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6JSUOtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f6JSUetBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f6JSUutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f6JSU-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6JSVOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6JSVetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6JSVutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6JSV-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6JSWOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6JSWetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LiOtBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="96">
+        <parameters xmi:id="_fn_LietBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbUOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6gez-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_ENTRYPLAZA&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_ENTRYPLAZA&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6KgcOtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f6KgcetBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f6KgcutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f6Kgc-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6KgdOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6KgdetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6KgdutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6Kgd-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6KgeOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6KgeetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LiutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_Li-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbVOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6getOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6LukOtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f6LuketBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f6LukutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f6Luk-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LjOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LjetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbVOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6ge0OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_ENTRYCLASS&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6MVoOtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f6MVoetBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f6MVoutBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f6MVo-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LjutBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="8">
+        <parameters xmi:id="_fn_Lj-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbVOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6ge0etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_ENTRYCLASS&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6NjwOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f6NjwetBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f6NjwutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f6Njw-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LkOtBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_fn_LketBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbVOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6ge0utBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_ENTRYCLASS&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_ENTRYCLASS&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6ROIOtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f6ROIetBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f6ROIutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f6ROI-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6ROJOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6ROJetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6ROJutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6ROJ-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6ROKOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6ROKetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LkutBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="8">
+        <parameters xmi:id="_fn_Lk-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbVOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6ge0-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_ENTRYCLASS&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_ENTRYCLASS&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6ScQOtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f6ScQetBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f6ScQutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f6ScQ-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6ScROtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6ScRetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6ScRutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6ScR-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6ScSOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6ScSetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LlOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LletBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbWOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6getetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6TqYOtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f6TqYetBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f6TqYutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f6TqY-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LlutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_Ll-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbWOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6ge1OtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_EXITPLAZA&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6URcOtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f6URcetBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f6URcutBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f6URc-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LmOtBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="90">
+        <parameters xmi:id="_fn_LmetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbWOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6ge1etBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_EXITPLAZA&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6VfkOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f6VfketBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f6VfkutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f6Vfk-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LmutBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_fn_Lm-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbWOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6hFwOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_EXITPLAZA&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_EXITPLAZA&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6WGoOtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f6WGoetBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f6WGoutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f6WGo-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6WGpOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6WGpetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6WGputBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6WGp-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6WGqOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6WGqetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LnOtBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="90">
+        <parameters xmi:id="_fn_LnetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbWOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6hFwetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_EXITPLAZA&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_EXITPLAZA&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6WtsOtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f6WtsetBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f6WtsutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f6Wts-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6WttOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6WttetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6WttutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6Wtt-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6WtuOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6WtuetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_fn_LnutBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_Ln-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbXOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6ges-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6X70OtBEe64va9FZ4ziGw" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_f6X70etBEe64va9FZ4ziGw" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_f6X70utBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_f6X70-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_fn_LoOtBEe64va9FZ4ziGw" count="45856577" computed="true">
+        <parameters xmi:id="_fn_LoetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbXOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6hFwutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; WHERE &quot;NCSH_EXITTCCLASS&quot; IS NULL " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6Yi4OtBEe64va9FZ4ziGw" name="Null Count" label="Null Count">
+          <taggedValue xmi:id="_f6Yi4etBEe64va9FZ4ziGw" tag="Purpose" value="evaluate the number of missing data (null records)"/>
+          <taggedValue xmi:id="_f6Yi4utBEe64va9FZ4ziGw" tag="Description" value="counts the number of null rows"/>
+          <sqlGenericExpression xmi:id="_f6Yi4-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NULL &lt;%=__AND_WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_fn_LoutBEe64va9FZ4ziGw" count="45856577" computed="true" distinctValueCount="7">
+        <parameters xmi:id="_fn_Lo-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbXOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6hFw-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &quot;NCSH_EXITTCCLASS&quot; FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; ) A" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6ZxAOtBEe64va9FZ4ziGw" name="Distinct Count" label="Distinct Count">
+          <taggedValue xmi:id="_f6ZxAetBEe64va9FZ4ziGw" tag="Description" value="counts the number of distinct rows (like a &quot;SELECT DISTINCT&quot; SQL statement)"/>
+          <taggedValue xmi:id="_f6ZxAutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of distinct records"/>
+          <sqlGenericExpression xmi:id="_f6ZxA-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT DISTINCT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>) A" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_fn_LpOtBEe64va9FZ4ziGw" count="45856577" computed="true" uniqueValueCount="0">
+        <parameters xmi:id="_fn_LpetBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbXOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6hFxOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_EXITTCCLASS&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  GROUP BY &quot;NCSH_EXITTCCLASS&quot; HAVING COUNT(*) = 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6aYEOtBEe64va9FZ4ziGw" name="Unique Count" label="Unique Count">
+          <taggedValue xmi:id="_f6aYEetBEe64va9FZ4ziGw" tag="Description" value="counts the number of unique rows (i.e. distinct rows with only one instance: rows that are not duplicated)"/>
+          <taggedValue xmi:id="_f6aYEutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of unique records"/>
+          <sqlGenericExpression xmi:id="_f6aYE-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6aYFOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6aYFetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6aYFutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount = 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6aYF-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6aYGOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6aYGetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) = 1)  myquery" language="Hive" version=""/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_fn_LputBEe64va9FZ4ziGw" count="45856577" computed="true" duplicateValueCount="7">
+        <parameters xmi:id="_fn_Lp-tBEe64va9FZ4ziGw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../../metadata/connections/SnowflakeDB_0.1.item#_ZAPbXOtBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_f6hFxetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &quot;NCSH_EXITTCCLASS&quot;, COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;  m  GROUP BY &quot;NCSH_EXITTCCLASS&quot; HAVING COUNT(*) > 1) AS myquery" language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_f6a_IOtBEe64va9FZ4ziGw" name="Duplicate Count" label="Duplicate Count">
+          <taggedValue xmi:id="_f6a_IetBEe64va9FZ4ziGw" tag="Description" value="counts the number of duplicate rows. This number and the number of unique data equals the number of distinct rows"/>
+          <taggedValue xmi:id="_f6a_IutBEe64va9FZ4ziGw" tag="Purpose" value="evaluates the number of duplicated records"/>
+          <sqlGenericExpression xmi:id="_f6a_I-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="SQL"/>
+          <sqlGenericExpression xmi:id="_f6a_JOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_f6a_JetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_f6a_JutBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING mycount > 1) AS myquery" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_f6a_J-tBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Microsoft SQL Server"/>
+          <sqlGenericExpression xmi:id="_f6a_KOtBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
+          <sqlGenericExpression xmi:id="_f6a_KetBEe64va9FZ4ziGw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_UHvbSetBEe64va9FZ4ziGw" dataFilter="_dIVSAOtBEe64va9FZ4ziGw" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_dIS1wOtBEe64va9FZ4ziGw" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_dIVSAOtBEe64va9FZ4ziGw" name="TestRow">
+    <ranges xmi:id="_dIVSAetBEe64va9FZ4ziGw">
+      <expressions xmi:id="_dIVSAutBEe64va9FZ4ziGw">
+        <expression xsi:type="relational:TdExpression" xmi:id="_dIVSA-tBEe64va9FZ4ziGw" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>

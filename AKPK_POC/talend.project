@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_mQvXgPTbEe-ac4dWOAxyMg" label="AKPK_POC" description="" language="java" technicalLabel="AKPK_POC" author="_mQvXgfTbEe-ac4dWOAxyMg" productVersion="Talend Cloud Data Fabric-8.0.1.20240118_0425-patch" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/MarvinTeh/AKPK_POC.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" itemsRelationVersion="1.3" bigData="false">
+    <migrationTask xmi:id="_mRPGwPTbEe-ac4dWOAxyMg" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_mQvXgfTbEe-ac4dWOAxyMg" login="marvin.teh@quandatics_sdnbhd_nfr" firstName="Marvin" lastName="Teh" type="DQ"/>
+</xmi:XMI>

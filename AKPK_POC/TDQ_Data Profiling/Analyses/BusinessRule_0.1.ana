@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:dataquality.indicators.sql="http://dataquality.indicators.sql" xmlns:dataquality.rules="http://dataquality.rules" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_MkVFoOtsEe6PB8f88Tth6A" name="BusinessRule" creationDate="2024-03-26T23:27:22.732+1100" defaultContext="Default">
+    <clientDependency href="../../TDQ_Libraries/Rules/SQL/Rule-CardType_0.1.rules#_GHYb0BHSEeus79wlODPhpw"/>
+    <clientDependency href="../../metadata/connections/SnowflakeDB_0.1.item#_dIUD4OtBEe64va9FZ4ziGw"/>
+    <taggedValue xmi:id="_MkVFoetsEe6PB8f88Tth6A" tag="Status" value="development"/>
+    <taggedValue xmi:id="_MkVFoutsEe6PB8f88Tth6A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+    <taggedValue xmi:id="_MkVFo-tsEe6PB8f88Tth6A" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_MkVFpOtsEe6PB8f88Tth6A" tag="Description" value=""/>
+    <taggedValue xmi:id="_MkVFpetsEe6PB8f88Tth6A" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_eXm6AetsEe6PB8f88Tth6A" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_eXovMOtsEe6PB8f88Tth6A" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_MkVssOtsEe6PB8f88Tth6A">
+      <connection href="../../metadata/connections/SnowflakeDB_0.1.item#_WTTGEIA7Ee2iSIuFypJhuw"/>
+      <analysedElements xsi:type="relational:TdTable" href="../../metadata/connections/SnowflakeDB_0.1.item#_XTuPEutBEe64va9FZ4ziGw"/>
+    </context>
+    <results xmi:id="_MkVssetsEe6PB8f88Tth6A">
+      <resultMetadata xmi:id="_MkVssutsEe6PB8f88Tth6A" executionDate="2024-03-26T23:29:24.541+1100" executionDuration="1642" message="Query not executed for indicator: &quot;Rule-CardType&quot; SQL query: SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;   WHERE (CARD_TYPE='CREDIT' OR CARD_TYPE='DEBIT'). Exception: SQL compilation error: error line 1 at position 72&#xA;invalid identifier 'CARD_TYPE'" executionNumber="1"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_eXm6AutsEe6PB8f88Tth6A" count="45856577" computed="true">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/SnowflakeDB_0.1.item#_XTuPEutBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_et4sAOtsEe6PB8f88Tth6A" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot; " language="Snowflake"/>
+        <builtInIndicatorDefinition xmi:id="_esgzAOtsEe6PB8f88Tth6A" name="Row Count" label="Row Count">
+          <taggedValue xmi:id="_esgzAetsEe6PB8f88Tth6A" tag="Description" value="counts the number of rows"/>
+          <taggedValue xmi:id="_esgzAutsEe6PB8f88Tth6A" tag="Purpose" value="evaluates the number of records"/>
+          <sqlGenericExpression xmi:id="_esgzA-tsEe6PB8f88Tth6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators.sql:WhereRuleIndicator" xmi:id="_eXm6A-tsEe6PB8f88Tth6A" count="45856577">
+        <analyzedElement xsi:type="relational:TdTable" href="../../metadata/connections/SnowflakeDB_0.1.item#_XTuPEutBEe64va9FZ4ziGw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Rules/SQL/Rule-CardType_0.1.rules#_NOM-4J6iEeq8BvVoyFeEWw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_et4sAetsEe6PB8f88Tth6A" body="SELECT COUNT(*) FROM &quot;DEMO_DB&quot;.&quot;PUBLIC&quot;.&quot;PLAZA_DATA_BY_TALEND&quot;   WHERE (CARD_TYPE='CREDIT' OR CARD_TYPE='DEBIT')" language="Snowflake"/>
+        <builtInIndicatorDefinition xsi:type="dataquality.rules:WhereRule" xmi:id="_et1osOtsEe6PB8f88Tth6A" name="Rule-CardType" criticalityLevel="1" whereExpression="CARD_TYPE='CREDIT' OR CARD_TYPE='DEBIT'">
+          <taggedValue xmi:id="_et1osetsEe6PB8f88Tth6A" tag="Status" value="development"/>
+          <taggedValue xmi:id="_et1osutsEe6PB8f88Tth6A" tag="Author" value="marvin.teh@nfr.quandatics.com"/>
+          <taggedValue xmi:id="_et1os-tsEe6PB8f88Tth6A" tag="Purpose" value=""/>
+          <taggedValue xmi:id="_et1otOtsEe6PB8f88Tth6A" tag="Description" value=""/>
+          <taggedValue xmi:id="_et1otetsEe6PB8f88Tth6A" tag="Version" value="0.1"/>
+          <taggedValue xmi:id="_et1otutsEe6PB8f88Tth6A" tag="Validation_Status" value="true"/>
+          <sqlGenericExpression xmi:id="_et1ot-tsEe6PB8f88Tth6A" body="SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> &lt;%=__JOIN_CLAUSE__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+    </results>
+    <parameters xmi:id="_MkVss-tsEe6PB8f88Tth6A" dataFilter="_eXsZkOtsEe6PB8f88Tth6A" analysisType="Table Analysis"/>
+    <contextType xmi:id="_eXm6AOtsEe6PB8f88Tth6A" confirmationNeeded="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_eXsZkOtsEe6PB8f88Tth6A" name="BusinessRule">
+    <ranges xmi:id="_eXsZketsEe6PB8f88Tth6A">
+      <expressions xmi:id="_eXsZkutsEe6PB8f88Tth6A">
+        <expression xsi:type="relational:TdExpression" xmi:id="_eXsZk-tsEe6PB8f88Tth6A" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
